@@ -24,7 +24,7 @@ func _ready():
 
 func _on_Timer_timeout():
 	# create a barrier here
-	print("spawn now")
+	print("spawn barrier now")
 	
 	# pick random
 	var barrier = barriers[ rand_range( 0, barriers.size() ) ]
@@ -33,4 +33,5 @@ func _on_Timer_timeout():
 		rand_range(10, SCREEN_SIZE.x-80),
 		position.y
 	)
-	get_tree().current_scene.add_child(barrier_obj)
+	get_tree().root.add_child(barrier_obj)
+	$Timer.start( rand_range( .8, 1.6 ) )
