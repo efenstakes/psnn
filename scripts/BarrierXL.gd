@@ -11,4 +11,4 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		print("collided")
 		EventManager.player_died_event()
-		queue_free()
+		# queue_free()
