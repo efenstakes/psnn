@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/BaloonSpawner.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Spawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/PSNN.gd" type="Script" id=5]
+[ext_resource path="res://scenes/GameOverHUD.tscn" type="PackedScene" id=6]
 
 [node name="PSNN" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 480.0
@@ -23,3 +27,7 @@ position = Vector2( 347, -196 )
 
 [node name="Spawner" parent="." instance=ExtResource( 3 )]
 position = Vector2( 235, -180 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="GameOverHUD" parent="." instance=ExtResource( 6 )]
