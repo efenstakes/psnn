@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/BarrierXL.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 59.5, 7 )
+extents = Vector2( 59.5, 8 )
 
 [node name="BarrierXL" type="Node2D"]
 script = ExtResource( 2 )
@@ -12,7 +12,7 @@ script = ExtResource( 2 )
 [node name="Area2D" type="Area2D" parent="." groups=["Barrier"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 14.5, -0.5 )
+position = Vector2( 15.5, 0 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
