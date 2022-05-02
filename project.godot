@@ -21,8 +21,8 @@ GameManager="*res://autoloads/GameManager.gd"
 
 [display]
 
-window/size/width=480
-window/size/height=640
+window/size/width=360
+window/size/height=560
 
 [input]
 
