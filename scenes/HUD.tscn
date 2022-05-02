@@ -45,3 +45,5 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 text = "Pause"
 flat = true
+
+[connection signal="pressed" from="ColorRect/HBoxContainer/Button" to="." method="_on_Button_pressed"]
