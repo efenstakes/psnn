@@ -14,3 +14,8 @@ func _ready():
 func _physics_process(delta)-> void:
 	position += speed * delta
 	
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	print("exiting now")
+	queue_free()
