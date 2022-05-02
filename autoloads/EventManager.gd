@@ -1,8 +1,12 @@
 extends Node
 
 
+signal new_score
 signal gain_made
 signal player_died
+
+func new_score_event(score: int)-> void:
+	emit_signal("new_score", score)
 
 
 func gain_made_event(gain: int)-> void:
