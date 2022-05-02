@@ -24,6 +24,8 @@ func _ready():
 	SCREEN_SIZE = get_viewport().size
 	print("size")
 	print(SCREEN_SIZE)
+	EventManager.connect("player_died", self, "_onPlayerDied")
+	EventManager.connect("new_game", self, "_onNewGame")
 
 
 func _physics_process(delta)-> void:
@@ -39,3 +41,11 @@ func _physics_process(delta)-> void:
 	
 	# move
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
+	
+	
+func _onNewGame()-> void:
+	rotation = 0
+	
+func _onPlayerDied()-> void:
+	rotation = -320
