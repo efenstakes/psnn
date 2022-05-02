@@ -5,9 +5,13 @@ var SCREEN_SIZE: Vector2 = Vector2.ZERO
 
 
 var BarrierXL : PackedScene = load("res://scenes/BarrierXL.tscn")
+var BarrierMD : PackedScene = load("res://scenes/BarrierMD.tscn")
+var BarrierSM : PackedScene = load("res://scenes/BarrierSM.tscn")
 
 var barriers := [
-	BarrierXL
+	BarrierXL,
+	BarrierMD,
+	BarrierSM
 ]
 
 # Called when the node enters the scene tree for the first time.
