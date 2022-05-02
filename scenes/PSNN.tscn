@@ -28,6 +28,8 @@ position = Vector2( 347, -196 )
 [node name="Spawner" parent="." instance=ExtResource( 3 )]
 position = Vector2( 235, -180 )
 
-[node name="HUD" parent="." instance=ExtResource( 4 )]
+[node name="HUDDER" type="Node2D" parent="."]
+
+[node name="HUD" parent="HUDDER" instance=ExtResource( 4 )]
 
 [node name="GameOverHUD" parent="." instance=ExtResource( 6 )]
