@@ -14,6 +14,8 @@ func _ready():
 
 func _physics_process(delta)-> void:
 	position += speed * delta
+	print("going down position ")
+	print(position)
 	
 
 
@@ -21,3 +23,7 @@ func _on_Balloon_body_entered(body):
 	if body.name == "Player":
 		EventManager.gain_made_event(5)
 		queue_free()
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()
