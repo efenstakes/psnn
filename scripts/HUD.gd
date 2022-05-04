@@ -13,6 +13,7 @@ onready var ResumeTexture := load("res://assets/play_button.png")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
+	ScoreLabel.text = str( 0 )
 	PauseResumeButton.texture_normal = PauseTexture
 	EventManager.connect("new_score", self, "_on_NewScore")
 	EventManager.connect("new_game", self, "_on_NewGame")
