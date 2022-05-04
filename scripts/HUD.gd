@@ -1,33 +1,33 @@
 extends CanvasLayer
 
 
-onready var ScoreLabel := $ColorRect/HBoxContainer/Score
+onready var ScoreLabel := $VBoxContainer/HBoxContainer/NinePatchRect/Score
+onready var PauseResumeButton: TextureButton = $VBoxContainer/HBoxContainer/TextureButton
 
+
+
+onready var PauseTexture := load("res://assets/pause_button.png")
+onready var ResumeTexture := load("res://assets/play_button.png")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
+	PauseResumeButton.texture_normal = PauseTexture
 	EventManager.connect("new_score", self, "_on_NewScore")
 	EventManager.connect("new_game", self, "_on_NewGame")
 
 
 func _on_NewGame(score):
+	print("new game in HUD")
 	ScoreLabel.text = str( 0 )
 
 func _on_NewScore(score):
+	print("new score _on_NewScore in HUD")
 	ScoreLabel.text = str( score )
 
 
-func _on_Button_pressed():
-	if get_tree().paused:
-		GameManager.unpause_game()
-		$ColorRect/HBoxContainer/Button.text = "Pause" 
-	else: 
-		GameManager.pause_game()
-		$ColorRect/HBoxContainer/Button.text = "Resume"
-		
-#
+
 #func _process(delta):
 #	if Input.is_action_just_pressed("ui_cancel"):
 #		if get_tree().paused:
@@ -45,3 +45,15 @@ func _on_Button_pressed():
 #	if get_tree().paused:
 #		GameManager.unpause_game()
 	
+
+
+func _on_TextureButton_pressed():
+	if get_tree().paused:
+		print("ResumeTexture")
+		PauseResumeButton.texture_normal = PauseTexture
+		GameManager.unpause_game()
+	else:
+		print("PauseTexture")
+		PauseResumeButton.texture_normal = ResumeTexture
+		GameManager.pause_game()
+		
