@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/GameOverHUD.tscn" type="PackedScene" id=6]
 
 [node name="PSNN" type="Node2D"]
+position = Vector2( -60, 0 )
 script = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -20,7 +21,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 204, 307 )
+position = Vector2( 199, 432 )
 
 [node name="BallonSpawner" parent="." instance=ExtResource( 2 )]
 position = Vector2( 347, -196 )
@@ -33,3 +34,5 @@ position = Vector2( 235, -180 )
 [node name="HUD" parent="HUDDER" instance=ExtResource( 4 )]
 
 [node name="GameOverHUD" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 0, -4 )
