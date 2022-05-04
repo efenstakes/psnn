@@ -34,5 +34,4 @@ position = Vector2( 235, -180 )
 [node name="HUD" parent="HUDDER" instance=ExtResource( 4 )]
 
 [node name="GameOverHUD" parent="." instance=ExtResource( 6 )]
-visible = false
-position = Vector2( 0, -4 )
+position = Vector2( 1, 0 )
