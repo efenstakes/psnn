@@ -6,7 +6,16 @@ signal new_score
 signal gain_made
 signal player_died
 
+signal game_paused
+signal game_unpaused
 
+
+
+func game_paused_event()-> void:
+	emit_signal("game_paused")
+
+func game_unpaused_event()-> void:
+	emit_signal("game_unpaused")
 
 func new_game_event()-> void:
 	emit_signal("new_game")
