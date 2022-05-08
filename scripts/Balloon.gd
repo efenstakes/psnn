@@ -14,8 +14,8 @@ func _ready():
 
 func _physics_process(delta)-> void:
 	position += speed * delta
-	print("going down position ")
-	print(position)
+	#print("going down position ")
+	#print(position)
 	
 
 

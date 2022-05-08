@@ -24,7 +24,7 @@ func _ready():
 
 func _on_Timer_timeout():
 	# create a barrier here
-	print("spawn barrier now")
+	#print("spawn barrier now")
 	
 	# pick random
 	var barrier = barriers[ rand_range( 0, barriers.size() ) ]

@@ -23,6 +23,10 @@ GameManager="*res://autoloads/GameManager.gd"
 
 window/size/width=360
 window/size/height=560
+window/size/resizable=false
+window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 

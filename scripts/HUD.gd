@@ -36,15 +36,16 @@ func _on_NewScore(score):
 #		else:
 #			GameManager.unpause_game()
 #
-#func _unhandled_key_input(event):
-#	if Input.is_action_just_pressed("ui_cancel"):
-#		if get_tree().paused:
-#			GameManager.unpause_game()
-#		else:
-#			GameManager.unpause_game()
-#
-#	if get_tree().paused:
-#		GameManager.unpause_game()
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("ui_cancel") and get_tree().paused:
+		print("unpause ui_cancel")
+		GameManager.unpause_game()
+		get_tree().paused = false
+		PauseResumeButton.texture_normal = PauseTexture
+	if Input.is_action_just_pressed("ui_cancel") and !get_tree().paused:
+		print("pause ui_cancel")
+		GameManager.pause_game()
+		PauseResumeButton.texture_normal = ResumeTexture
 	
 
 

@@ -15,9 +15,9 @@ func _ready():
 	SCREEN_SIZE = get_viewport_rect().size
 	randomize()
 	EventManager.connect("gain_made", self, "_on_GainMade")
-	print("b4 get_tree().create_timer(2)")
+	#print("b4 get_tree().create_timer(2)")
 	get_tree().create_timer(.5)
-	print("after get_tree().create_timer(2)")
+	#print("after get_tree().create_timer(2)")
 	EventManager.new_score_event(score)
 
 
@@ -29,7 +29,7 @@ func _on_GainMade(gain):
 
 
 func _on_Timer_timeout():
-	print("adding new balloon")
+	#print("adding new balloon")
 	var balloon = BalloonScene.instance()
 	balloon.position = Vector2(
 		rand_range( 2, SCREEN_SIZE.x - 20 ), 0

@@ -20,10 +20,10 @@ export(Vector2) var SCREEN_SIZE := Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("player loaded")
+	#print("player loaded")
 	SCREEN_SIZE = get_viewport().size
-	print("size")
-	print(SCREEN_SIZE)
+	#print("size")
+	#print(SCREEN_SIZE)
 	EventManager.connect("player_died", self, "_onPlayerDied")
 	EventManager.connect("new_game", self, "_onNewGame")
 
