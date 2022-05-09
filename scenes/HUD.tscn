@@ -57,13 +57,13 @@ __meta__ = {
 }
 
 [node name="status" type="Label" parent="VBoxContainer/HBoxContainer/Sheld"]
-margin_left = 88.0
+margin_left = 70.0
 margin_top = 21.0
-margin_right = 132.0
+margin_right = 157.0
 margin_bottom = 35.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
-text = "ACTIVE"
+text = "DEACTIVATED"
 align = 1
 valign = 1
 __meta__ = {
@@ -95,4 +95,14 @@ texture_normal = ExtResource( 4 )
 expand = true
 stretch_mode = 5
 
+[node name="ActivateSheldAfterTimer" type="Timer" parent="VBoxContainer"]
+wait_time = 10.0
+
+[node name="DeactivateSheldAfterTimer" type="Timer" parent="VBoxContainer"]
+
+[node name="ShieldLifeTimer" type="Timer" parent="VBoxContainer"]
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/PauseResume" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="VBoxContainer/ActivateSheldAfterTimer" to="." method="_on_ActivateSheldAfterTimer_timeout"]
+[connection signal="timeout" from="VBoxContainer/DeactivateSheldAfterTimer" to="." method="_on_DeactivateSheldAfterTimer_timeout"]
+[connection signal="timeout" from="VBoxContainer/ShieldLifeTimer" to="." method="_on_ShieldLifeTimer_timeout"]
