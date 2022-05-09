@@ -1,13 +1,15 @@
 extends CanvasLayer
 
 
-onready var ScoreLabel := $VBoxContainer/HBoxContainer/NinePatchRect/Score
-onready var PauseResumeButton: TextureButton = $VBoxContainer/HBoxContainer/TextureButton
+onready var ScoreLabel := $VBoxContainer/HBoxContainer/ScoreContainer/Score
+onready var PauseResumeButton: TextureButton = $VBoxContainer/HBoxContainer/PauseResume
 
 
 
 onready var PauseTexture := load("res://assets/pause_button.png")
 onready var ResumeTexture := load("res://assets/play_button.png")
+
+
 
 
 # Called when the node enters the scene tree for the first time.
