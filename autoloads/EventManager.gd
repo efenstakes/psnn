@@ -10,6 +10,10 @@ signal game_paused
 signal game_unpaused
 
 
+signal sheild_activated
+signal sheild_deactivated
+
+
 
 func game_paused_event()-> void:
 	emit_signal("game_paused")
@@ -32,3 +36,13 @@ func gain_made_event(gain: int)-> void:
 
 func player_died_event()-> void:
 	emit_signal("player_died")
+	
+	
+func sheild_activated_event()-> void:
+	emit_signal("sheild_activated")
+
+
+func sheild_deactivated_event()-> void:
+	emit_signal("sheild_deactivated")
+
+	
