@@ -1,10 +1,10 @@
 extends Node
 
 
-var GameOverHUD
-
-
 var player_score : int = 0
+
+var shield_active : bool = false
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,7 +13,8 @@ func _ready()-> void:
 	EventManager.connect("new_game", self, "_onNewGameStarted")
 	EventManager.connect("new_score", self, "_onNewScore")
 	EventManager.connect("player_died", self, "_onPlayerDied")
-
+	EventManager.connect("sheild_activated", self, "_onShieldActivated")
+	EventManager.connect("sheild_deactivated", self, "_onShieldDeactivated")
 
 
 func new_game()-> void:
@@ -47,3 +48,12 @@ func _onPlayerDied()-> void:
 	print("player died")
 	# $HUDDER.visible = false
 	pause_game()
+	
+	
+func _onShieldActivated():
+	shield_active = true
+	
+func _onShieldDeactivated():
+	shield_active = false
+	
+	
