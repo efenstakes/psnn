@@ -71,9 +71,9 @@ __meta__ = {
 }
 
 [node name="RemainingTime" type="Label" parent="VBoxContainer/HBoxContainer/Sheld"]
-margin_left = 164.0
+margin_left = 170.0
 margin_top = 21.0
-margin_right = 174.0
+margin_right = 180.0
 margin_bottom = 35.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
