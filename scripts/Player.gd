@@ -12,10 +12,10 @@ export(Vector2) var direction : Vector2 = Vector2.ZERO
 export(Vector2) var velocity : Vector2 = Vector2.ZERO
 
 # its max speed
-export(Vector2) var MAX_SPEED : Vector2 = Vector2(200, 400)
+export(Vector2) var MAX_SPEED : Vector2 = Vector2(400, 400)
 
 # acceleration
-export(int) var acceleration := 4000
+export(int) var acceleration := 8000
 
 
 # screen size
