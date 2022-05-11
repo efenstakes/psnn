@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://assets/round_box.png" type="Texture" id=2]
 [ext_resource path="res://assets/shield-indicator.png" type="Texture" id=3]
 [ext_resource path="res://assets/pause_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/left_touch.png" type="Texture" id=5]
+[ext_resource path="res://assets/right_touch.png" type="Texture" id=6]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -12,8 +14,10 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
-margin_top = 8.0
+margin_top = 7.0
 margin_right = -8.0
+margin_bottom = -14.0
+size_flags_vertical = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -101,6 +105,43 @@ wait_time = 10.0
 [node name="DeactivateSheldAfterTimer" type="Timer" parent="VBoxContainer"]
 
 [node name="ShieldLifeTimer" type="Timer" parent="VBoxContainer"]
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 344.0
+margin_bottom = 479.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MobileControls" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 483.0
+margin_right = 344.0
+margin_bottom = 539.0
+rect_min_size = Vector2( 0, 56 )
+size_flags_horizontal = 3
+
+[node name="Left" type="TouchScreenButton" parent="VBoxContainer/MobileControls"]
+position = Vector2( 1, -21 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 5 )
+passby_press = true
+action = "ui_left"
+visibility_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MobileControls"]
+margin_bottom = 56.0
+
+[node name="Right" type="TouchScreenButton" parent="VBoxContainer/MobileControls"]
+position = Vector2( 266, -22 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 6 )
+passby_press = true
+action = "ui_right"
+visibility_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/PauseResume" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="VBoxContainer/ActivateSheldAfterTimer" to="." method="_on_ActivateSheldAfterTimer_timeout"]
