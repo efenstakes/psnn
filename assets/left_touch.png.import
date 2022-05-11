@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/round_box.png-bda4503888d60822114141547be3a9d6.stex"
+path="res://.import/left_touch.png-35d1f51f12ca5ae012d7e1a3f9c107a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/round_box.png"
-dest_files=[ "res://.import/round_box.png-bda4503888d60822114141547be3a9d6.stex" ]
+source_file="res://assets/left_touch.png"
+dest_files=[ "res://.import/left_touch.png-35d1f51f12ca5ae012d7e1a3f9c107a6.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
