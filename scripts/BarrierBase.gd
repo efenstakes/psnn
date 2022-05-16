@@ -2,7 +2,7 @@ extends Node2D
 
 
 # the speed
-var speed: Vector2 = Vector2(0, 250)
+var speed: Vector2 = Vector2(0, 300)
 
 
 # Called when the node enters the scene tree for the first time.
