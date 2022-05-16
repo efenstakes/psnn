@@ -14,6 +14,10 @@ signal sheild_activated
 signal sheild_deactivated
 
 
+signal increase_speed
+
+
+
 
 func game_paused_event()-> void:
 	emit_signal("game_paused")
@@ -46,3 +50,5 @@ func sheild_deactivated_event()-> void:
 	emit_signal("sheild_deactivated")
 
 	
+func increase_speed_event(speed: int)-> void:
+	emit_signal("increase_speed", speed)
